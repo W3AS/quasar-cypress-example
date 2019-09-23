@@ -1,5 +1,7 @@
 # Quasar Cypress Example (quasar-cypress-example)
 
+![N|Solid](https://github.com/W3AS/quasar-cypress-example/blob/master/src/statics/logo-w3as-cypress.png?raw=true)
+
 A Quasar Framework app
 
 ## Install the dependencies
@@ -11,19 +13,16 @@ npm install
 ```bash
 quasar dev
 ```
-
-### Lint the files
+### Start E2E test
 ```bash
-npm run lint
+npm run test:e2e
 ```
 
 ### Build the app for production
 ```bash
 quasar build
 ```
+Contributors:
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
-
-
-Beatriz Alcantara
+[Beatriz Alcantara]('https://github.com/Beatriz813'), 
+[Patrick Monteiro]('https://github.com/patrickmonteiro')
