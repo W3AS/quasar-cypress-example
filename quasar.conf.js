@@ -52,7 +52,12 @@ module.exports = function (ctx) {
         'QList',
         'QItem',
         'QItemSection',
-        'QItemLabel'
+        'QItemLabel',
+        'QInput',
+        'QSelect',
+        'QRadio',
+        'QSlider',
+        'QBadge'
       ],
 
       directives: [
@@ -60,7 +65,9 @@ module.exports = function (ctx) {
       ],
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'Dialog'
+      ]
     },
 
     supportIE: true,
