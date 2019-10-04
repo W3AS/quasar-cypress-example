@@ -1,0 +1,12 @@
+version: "3"
+services:
+  quasar-cypress-example:
+    container_name: quasar-cypress-example
+    build: .
+    image: quasar-cypress-example
+    volumes:
+      - ./test/cypress:/app/test/cypress/
+        - ./:/app
+        # - ./node_modules:/app/node_modules
+    ports:
+       - "9011:4000"
