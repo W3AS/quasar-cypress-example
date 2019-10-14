@@ -57,7 +57,9 @@ module.exports = function (ctx) {
         'QSelect',
         'QRadio',
         'QSlider',
-        'QBadge'
+        'QBadge',
+        'QDate',
+        'QPopupProxy'
       ],
 
       directives: [

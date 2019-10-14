@@ -6,6 +6,17 @@
         <q-input class="col-12" v-model="form.ultimoNome" label="Ultimo Nome" data-cy="sobrenome"/>
         <q-select v-model="form.estado" label="Estado" :options="opcaoEstado" data-cy="estado"/>
         <q-input v-model="form.cpf" mask="###.###.###-##" label="CPF" type="tel" data-cy="cpf"/>
+        <!-- Data -->
+        <q-input label="Data" mask="##/##/####" v-model="form.data" data-cy="dataInput">
+          <template v-slot:append>
+            <q-icon name="event" class="cursor-pointer" data-cy="dataDatePicker">
+              <q-popup-proxy ref="qDateProxy" transition-show="scale" transition-hide="scale" :breakpoint="600">
+                <q-date v-model="form.data" @input="() => $refs.qDateProxy.hide()" mask="DD/MM/YYYY" />
+              </q-popup-proxy>
+            </q-icon>
+          </template>
+        </q-input>
+        <!-- Data -->
         <q-radio v-model="form.sexo" val="M" label="Masculino" data-cy="masc"/>
         <q-radio v-model="form.sexo" val="F" label="Feminino" data-cy="fem"/>
         <br />
@@ -34,7 +45,8 @@ export default {
         ultimoNome: '',
         cpf: '',
         estado: '',
-        sexo: ''
+        sexo: '',
+        data: ''
       },
       dados: false,
       opcaoEstado: ['AC', 'AM', 'BA', 'DF']
