@@ -58,6 +58,8 @@ module.exports = function (ctx) {
         'QRadio',
         'QSlider',
         'QBadge',
+        'QDate',
+        'QPopupProxy'
         'QToggle'
       ],
 

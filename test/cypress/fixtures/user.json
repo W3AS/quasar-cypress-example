@@ -4,5 +4,7 @@
   "cpf": "03970451230",
   "cpfFormatado": "039.704.512-30",
   "estado": "AC",
-  "sexo": "Feminino"
+  "sexo": "Feminino",
+  "data": "24/03/1997",
+  "dataSelecionada": "16/03/1997"
 }
