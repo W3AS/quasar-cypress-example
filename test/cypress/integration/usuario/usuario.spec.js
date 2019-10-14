@@ -1,14 +1,11 @@
 let user = {}
 
-
-  
 describe('Realiza Cadastro', () => {
-  
   before(() => {
     cy.fixture('../fixtures/user.json')
-  .then((data) => {
-    user = data
-  })
+      .then((data) => {
+        user = data
+      })
   })
   it('Acessar', () => {
     cy.visit('usuario')
@@ -46,7 +43,13 @@ describe('Realiza Cadastro', () => {
   it('Selecionar sexo', () => {
     cy.contains(user.sexo).click()
   })
+  it('Selecionar Nacionalidade', () => {
+    cy.contains('Brasileiro').click()
+    cy.wait(500)
+    cy.contains('Brasileiro').click()
+  })
   it('Pressionar o botão', () => {
+    cy.wait(1000)
     cy.get('button[data-cy="botao"]').click()
     cy.wait(2000)
   })
